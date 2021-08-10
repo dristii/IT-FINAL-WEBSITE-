@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=c, initial-scale=1.0">
+  <title>Home- Dristi</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar1">
+        <div id="logo"> </div>
+        <i class="search_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></i>
+        <ul>
+          <li><a href="#"> Home </a></li> |
+          <li><a href="./about.html"> About </a></li> |
+          <li><a href="./blog.html"> Blog </a></li> |
+          <li><a href="./contact.html"> Contact </a></li>
+        </ul>
+
+      </nav>
+    </header>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <!-- <div class="numbertext">1 / 3</div> -->
+        <img src="img1.jpg" style="width:100%">
+        <div class="text">dristi blogs </div>
+      </div>
+
+      <div class="mySlides fade">
+        <!-- <div class="numbertext">2 / 3</div> -->
+        <img src="img2.jfif" style="width:100%">
+        <div class="text"><a href="#about">ABOUT</a></div>
+      </div>
+
+      <div class="mySlides fade">
+        <!-- <div class="numbertext">3 / 3</div> -->
+        <img src="img3.jpg" style="width:100%">
+        <div class="text"><a href="#blog">blog</a></div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="content">
+      <div class="row" id="about" >
+        <div class="content_body left ">
+          <img class="shadow-left" src="pp1.jpg">
+        </div>
+        <div class="content_description right" >
+          <a href="./about.html">
+            <h1>ABOUT</h1>
+            <p> STUDENT | DESIGNER | DEVELPOER | FASHIONISTA </p>
+          </a>
+        </div>
+      </div>
+      <div class="row" align ="right" id="blog">
+        <div class="content_body ">
+          <img class="shadow-right" src="pp2.jpg">
+        </div>
+                <div class="content_description left" >
+          <a href="./blog.html">
+            <h1>BLOG</h1>
+            <p> TRAVEL | PLACES | CUISINE | RELIGION </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <fieldset>
+        <legend>
+          <a href="gallery.html">
+          <h1>GALLERY</h1></legend>
+        <table border="0">
+          <tr>
+            <td><img src="i1.jpg" alt="blue sky"></td>
+            <td><img src="i2.jpg" alt="waterfall"></td>
+            <td><img src="i4.jpg" alt="plane"></td>
+            <td><img src="i3.jpg" alt="forest"></td>
+          </tr>
+        </table>
+      </a>
+      </fieldset>
+      <p>
+        All Content &copy; 2021 | DristiBlogs
+      </p>
+      <nav class="footer_bar">
+      <a href="./about.html">About</a> |
+      <a href="./blog.html">Blog</a> |
+      <a href="./contact.html">Contact</a>
+    </nav>
+    </footer>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      console.log(slides[slideIndex - 1]);
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+  </script>
+</body>
+
+</html>

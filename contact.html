@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"content="width=device-width">
+  <title>Contact- Dristi</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar1">
+        <div id="logo"> </div>
+        <i class="search_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></i>
+        <ul>
+          <li><a href="./index.html"> Home </a></li> |
+          <li><a href="./about.html"> About </a></li> |
+          <li><a href="./blog.html"> Blog </a></li> |
+          <li><a href="#contact_main"> Contact </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contact_main" id="contact_main">
+      <section class="float-left">
+        <h1> Get to know us </h1>
+        <h3><br> Address</h2>
+        <p id="form"> Basantanagar balaju, <br>Kathmandu, Nepal </p>
+        <h3>Email</h3>
+        <p id="form"> sdristi21@tbc.edu.np </p>
+        <h3>Phone no.</h3>
+        <p id="form"> +977 9876543210 <br> +977 (1) 5970003 </p>
+        <h3>Socials</h2>
+          <a href="https://twitter.com/">
+          <img src="./twitter.svg"></a>
+          <a href="https://youtube.com/">
+          <img src="./youtube.svg" alt=""></a>
+          <a href="https://instagram.com/">
+          <img src="./instagram.svg" alt="">
+          <a href="https://facebook.com/">
+          <img src="./facebook.svg" alt="">
+      </section>
+
+      <aside class="contact_form">
+        <h1> Contact Us </h1>
+        <form name="contact">
+          <label for="name">
+            Name
+          </label>
+          <input type="text" name="name" placeholder="Your name.." required>
+          <label for="email">
+            Email
+          </label>
+          <input type="email" name="email" id="" placeholder="Your Email Address.." required>
+          <label for="phone">
+            Phone
+          </label>
+          <input type="tel" name="phone" id="" placeholder="Your phone no.">
+          <label for="country">
+            Country
+          </label>
+          <input type="text" name="country" id="" placeholder="Country name">
+          <label>
+            Message
+          </label>
+          <textarea height="10px" ></textarea>
+          <input type="submit" value="Submit" placeholder="Write Something">
+        </form>
+      </aside>
+      <div class="clear">
+
+      </div>
+    </main>
+
+
+    <footer>
+      <fieldset>
+        <legend>
+          <a href="gallery.html">
+          <h1>GALLERY</h1>
+        </legend>
+        <table border="0">
+          <tr>
+            <td><img src="i1.jpg" alt="blue sky"></td>
+            <td><img src="i2.jpg" alt="waterfall"></td>
+            <td><img src="i4.jpg" alt="plane"></td>
+            <td><img src="i3.jpg" alt="forest"></td>
+          </tr>
+        </table>
+      </a>
+      </fieldset>
+      <p>
+        All Content &copy; 2021 | DristiBlogs
+      </p>
+      <nav class="footer_bar">
+      <a href="./about.html">About</a> |
+      <a href="./blog.html">Blog</a> |
+      <a href="./contact.html">Contact</a>
+    </nav>
+    </footer>
+  </div>
+<script>
+  
+    // redirection code
+    window.onload = function() {
+      var form = document.querySelector("form");
+      form.onsubmit = submitted.bind(form);
+    }
+
+  function submitted(event) {
+    event.preventDefault();
+    window.location.href = "./thankyou.html";
+  }
+</script>
+</body>
+</html>
